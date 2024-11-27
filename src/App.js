@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useEffect } from "react";
 
 function App() {
-  const prev=[];
   const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
 
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <h1>{prev[1]}</h1>
       <h1 className="text-3xl font-semibold text-gray-800 mb-6">Stopwatch</h1>
       <div className="text-4xl font-mono text-gray-700">
         <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
